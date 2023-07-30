@@ -1,16 +1,8 @@
-# style_palette_app
+# Events app
 
-A new Flutter project.
+Flutter events app UI that consist of 3 screens home screen, event screen, and profile screen.
 
-## Getting Started
+## YouTube Link:
 
-This project is a starting point for a Flutter application.
+[Flutter Events app UI | Speed Code](https://youtu.be/ozgOU9C3vF4)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

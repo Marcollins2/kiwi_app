@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "39744453202",
+    "project_id": "kiwi-2e8a3",
+    "storage_bucket": "kiwi-2e8a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39744453202:android:e6bc14480e80f35868fd8b",
+        "android_client_info": {
+          "package_name": "com.eventsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39744453202-0km3o5aeie28s49b5gfutdtig98cinlm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjzy24yv9CqCfrll-t-ZMuRIbrRCrU6oY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39744453202-0km3o5aeie28s49b5gfutdtig98cinlm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
