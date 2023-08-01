@@ -21,12 +21,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ? KAppColor
               : Colors.transparent,
           padding: EdgeInsets.symmetric(
-            horizontal: 3,
-            vertical: 5,
+            horizontal: 10,
+            vertical: 10,
           ),
           child: Row(
             children: [
               Icon(category['icon'], color: Colors.white),
+              SizedBox(width: 8),
               Text(
                 category['name'],
                 style: TextStyle(
@@ -42,6 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
           setState(() {
             _selectedCategory = categories.indexOf(category);
           });
+          print(_selectedCategory);
         },
       ));
     }
@@ -58,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               height: 200,
               padding: EdgeInsets.all(20),
-              color: Colors.greenAccent,
+              color: Colors.black87,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -72,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Colors.white,
                           ),
                           Text(
-                            'Ambrose M., Kampala',
+                            'Ambrose Mwaka, Kampala',
                             style: TextStyle(
                               color: Colors.white,
                               decoration: TextDecoration.underline,
@@ -92,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: CircleAvatar(
                           radius: 20,
                           backgroundImage: AssetImage(
-                            'assets/pp.jpg',
+                            'images/img1.jpg',
                           ),
                         ),
                       )
@@ -125,83 +127,241 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(height: 15),
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Central',
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 15,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 20),
-                        child: Text(
-                          'All',
+            if (_selectedCategory == 0) ...[
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Central',
                           style: TextStyle(
                             color: Colors.grey,
+                            fontSize: 15,
                           ),
                         ),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Container(
-                    height: 290,
-                    child: ListView.builder(
-                      itemCount: weekendEvents.length,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        Event event = weekendEvents[index];
-                        return HomeEventContainer(
-                          event: event,
-                        );
-                      },
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Text(
+                            'All',
+                            style: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        )
+                      ],
                     ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Western',
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 15,
-                        ),
+                    SizedBox(height: 10),
+                    Container(
+                      height: 290,
+                      child: ListView.builder(
+                        itemCount: cultureTabCentralRegionItems.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          Event event = cultureTabCentralRegionItems[index];
+                          return HomeEventContainer(
+                            event: event,
+                          );
+                        },
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 20),
-                        child: Text(
-                          'All',
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Western',
                           style: TextStyle(
                             color: Colors.grey,
+                            fontSize: 15,
                           ),
                         ),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Container(
-                    height: 300,
-                    child: ListView.builder(
-                      itemCount: upcomingHomeEvents.length,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        Event event = upcomingHomeEvents[index];
-                        return HomeEventContainer(
-                          event: event,
-                        );
-                      },
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Text(
+                            'All',
+                            style: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        )
+                      ],
                     ),
-                  ),
-                ],
-              ),
-            )
+                    SizedBox(height: 10),
+                    Container(
+                      height: 300,
+                      child: ListView.builder(
+                        itemCount: cultureTabWesternRegionItems.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          Event event = cultureTabWesternRegionItems[index];
+                          return HomeEventContainer(
+                            event: event,
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ] else if (_selectedCategory == 1) ...[
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Central',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 15,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Text(
+                            'All',
+                            style: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Container(
+                      height: 290,
+                      child: ListView.builder(
+                        itemCount: dinnerTabCentralRegionItems.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          Event event = dinnerTabCentralRegionItems[index];
+                          return HomeEventContainer(
+                            event: event,
+                          );
+                        },
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Western',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 15,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Text(
+                            'All',
+                            style: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Container(
+                      height: 300,
+                      child: ListView.builder(
+                        itemCount: dinnerTabWesternRegionItems.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          Event event = dinnerTabWesternRegionItems[index];
+                          return HomeEventContainer(
+                            event: event,
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ] else if (_selectedCategory == 2) ...[
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Central',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 15,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Text(
+                            'All',
+                            style: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Container(
+                      height: 290,
+                      child: ListView.builder(
+                        itemCount: islamTabCentralRegionItems.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          Event event = islamTabCentralRegionItems[index];
+                          return HomeEventContainer(
+                            event: event,
+                          );
+                        },
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Western',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 15,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Text(
+                            'All',
+                            style: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Container(
+                      height: 300,
+                      child: ListView.builder(
+                        itemCount: islamTabWesternRegionItems.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          Event event = islamTabWesternRegionItems[index];
+                          return HomeEventContainer(
+                            event: event,
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ]
           ],
         ),
       ),
