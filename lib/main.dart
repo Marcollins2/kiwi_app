@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kiwi_eventsapp/Screens/HomeScreen.dart';
-import 'package:kiwi_eventsapp/Screens/login.dart';
-import 'package:kiwi_eventsapp/Screens/signup.dart';
-import 'package:kiwi_eventsapp/Screens/welcomescreen.dart';
+import 'package:style_palette_app/Screens/HomeScreen.dart';
+import 'package:style_palette_app/Screens/login.dart';
+import 'package:style_palette_app/Screens/signup.dart';
+import 'package:style_palette_app/Screens/welcomescreen.dart';
 
 void main() {
   runApp(MyApp());

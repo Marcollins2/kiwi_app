@@ -1,7 +1,7 @@
-import 'package:kiwi_eventsapp/Modules/Data.dart';
-import 'package:kiwi_eventsapp/Modules/Event.dart';
-import 'package:kiwi_eventsapp/Screens/ProfileScreen.dart';
-import 'package:kiwi_eventsapp/Widgets/HomeEventContainer.dart';
+import 'package:style_palette_app/Modules/Data.dart';
+import 'package:style_palette_app/Modules/Event.dart';
+import 'package:style_palette_app/Screens/ProfileScreen.dart';
+import 'package:style_palette_app/Widgets/HomeEventContainer.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {

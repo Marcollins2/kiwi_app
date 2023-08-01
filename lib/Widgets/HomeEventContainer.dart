@@ -1,5 +1,5 @@
-import 'package:kiwi_eventsapp/Modules/Event.dart';
-import 'package:kiwi_eventsapp/Screens/EventScreen.dart';
+import 'package:style_palette_app/Modules/Event.dart';
+import 'package:style_palette_app/Screens/EventScreen.dart';
 import 'package:flutter/material.dart';
 
 class HomeEventContainer extends StatelessWidget {

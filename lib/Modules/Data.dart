@@ -1,4 +1,4 @@
-import 'package:kiwi_eventsapp/Modules/Event.dart';
+import 'package:style_palette_app/Modules/Event.dart';
 import 'package:flutter/material.dart';
 
 const Color KAppColor = Color(0xffde554d);

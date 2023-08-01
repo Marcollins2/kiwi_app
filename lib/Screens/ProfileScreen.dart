@@ -1,6 +1,6 @@
-import 'package:kiwi_eventsapp/Modules/Data.dart';
-import 'package:kiwi_eventsapp/Modules/Event.dart';
-import 'package:kiwi_eventsapp/Widgets/ProfileEventContainer.dart';
+import 'package:style_palette_app/Modules/Data.dart';
+import 'package:style_palette_app/Modules/Event.dart';
+import 'package:style_palette_app/Widgets/ProfileEventContainer.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
