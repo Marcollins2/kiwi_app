@@ -22,13 +22,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Container(
                 height: 150,
                 padding: EdgeInsets.all(30),
-                color: Colors.greenAccent,
+                color: Colors.black87,
                 child: Row(
                   children: [
                     CircleAvatar(
                       radius: 35,
                       backgroundImage: AssetImage(
-                        'assets/pp.jpg',
+                        'images/img1.jpg',
                       ),
                     ),
                     SizedBox(width: 30),

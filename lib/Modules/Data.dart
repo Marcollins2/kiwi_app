@@ -10,15 +10,15 @@ List<Map> categories = [
   },
   {
     "name": 'DINNER',
-    'icon': Icons.sports_basketball,
+    'icon': Icons.fastfood,
   },
   {
     "name": 'ISLAM',
-    'icon': Icons.fastfood,
+    'icon': Icons.self_improvement_sharp,
   },
 ];
 
-List<Event> weekendEvents = [
+List<Event> cultureTabCentralRegionItems = [
   Event(
     name: 'Gomesi_Busuuti',
     image: 'images/img2.jpg',
@@ -56,7 +56,7 @@ List<Event> weekendEvents = [
       about: 'Embrace tradition always'),
 ];
 
-List<Event> upcomingHomeEvents = [
+List<Event> cultureTabWesternRegionItems = [
   Event(
       name: 'Umushanana',
       image: 'images/img8.jpg',
@@ -135,6 +135,58 @@ List<Event> profileEvents = [
   Event(
     name: 'Vumbula Festival',
     image: 'assets/event2.jpg',
+    category: categories[0],
+    location: 'Jinja, Uganda',
+    cost: 'UGX 60-240k',
+    available: 3,
+    about:
+        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+  ),
+];
+
+List<Event> dinnerTabCentralRegionItems = [
+  Event(
+    name: 'Luwombo Dishes',
+    image: 'images/img2.jpg',
+    category: categories[0],
+    location: 'Jinja, Uganda',
+    cost: 'UGX 60-240k',
+    available: 3,
+    about:
+        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+  ),
+];
+
+List<Event> dinnerTabWesternRegionItems = [
+  Event(
+    name: 'Luwombo Dishes',
+    image: 'images/img2.jpg',
+    category: categories[0],
+    location: 'Jinja, Uganda',
+    cost: 'UGX 60-240k',
+    available: 3,
+    about:
+        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+  ),
+];
+
+List<Event> islamTabCentralRegionItems = [
+  Event(
+    name: 'Hijjab',
+    image: 'images/img2.jpg',
+    category: categories[0],
+    location: 'Jinja, Uganda',
+    cost: 'UGX 60-240k',
+    available: 3,
+    about:
+        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+  ),
+];
+
+List<Event> islamTabWesternRegionItems = [
+  Event(
+    name: 'Kanzu',
+    image: 'images/img2.jpg',
     category: categories[0],
     location: 'Jinja, Uganda',
     cost: 'UGX 60-240k',
