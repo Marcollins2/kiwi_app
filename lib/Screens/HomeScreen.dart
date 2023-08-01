@@ -214,7 +214,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Central',
+                          'Knee_Length',
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 15,
@@ -249,7 +249,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Western',
+                          'Party_Guest Dresses',
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 15,

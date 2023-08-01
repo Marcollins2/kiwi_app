@@ -9,7 +9,7 @@ List<Map> categories = [
     'icon': Icons.music_note,
   },
   {
-    "name": 'DINNER',
+    "name": 'DRESSES',
     'icon': Icons.fastfood,
   },
   {
@@ -146,27 +146,146 @@ List<Event> profileEvents = [
 
 List<Event> dinnerTabCentralRegionItems = [
   Event(
-    name: 'Luwombo Dishes',
-    image: 'images/img2.jpg',
+    name: 'Prom_Dress',
+    image: 'images/img18.jpg',
     category: categories[0],
-    location: 'Jinja, Uganda',
-    cost: 'UGX 60-240k',
-    available: 3,
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 120',
+    available: 4,
     about:
-        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+        'Kateprom Sleeveless Party Homecoming Dress Short Royal Blue Prom Dresses With Zipper',
   ),
+
+   Event(
+    name: 'Prom_Dress',
+    image: 'images/img16.jpg',
+    category: categories[0],
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 120',
+    available: 5,
+    about:
+        'Our Dresses are all custom-made, so you order them in any size and color, and you can get your dress within 20-25 days after your payment.You can make the dress in standard size or custom size.',
+  ),
+
+   Event(
+    name: 'Prom_Dress',
+    image: 'images/img19.jpg',
+    category: categories[0],
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 120',
+    available: 7,
+    about:
+        'Light Blue Prom Dresses Short Tea-Length Lace Applique Corset Back Formal Evening Dress Party Gowns Plus Size Vestido De Fiesta',
+  ),
+
+   Event(
+    name: 'Prom_Dress',
+    image: 'images/img21.jpg',
+    category: categories[0],
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 120',
+    available: 9,
+    about:
+        'Charming Dark Red Lace Cap Sleeve Prom Party Dresses. Elegant Knee Length. A Line Plus Size Celebrity Dresses Gala',
+  ),
+
+Event(
+    name: 'Cocktail_Dress',
+    image: 'images/img18.jpg',
+    category: categories[0],
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 120',
+    available: 10,
+    about:
+        'Vintage Elegant Knee Length Cocktail Dress. More size and colour options in stock',
+  ),
+
+  Event(
+    name: 'Party_Dress',
+    image: 'images/img17.jpg',
+    category: categories[0],
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 120',
+    available: 4,
+    about:
+        'Short Navy Blue Knee Length Lace Party Dress Evening Dress',
+  ),
+
+  Event(
+    name: 'Prom_Dress',
+    image: 'images/img20.jpg',
+    category: categories[0],
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 120',
+    available: 4,
+    about:
+        'Vintage Elegant Knee Length Cocktail Dress. More size and colour options in stock',
+  ),
+
 ];
 
 List<Event> dinnerTabWesternRegionItems = [
   Event(
-    name: 'Luwombo Dishes',
-    image: 'images/img2.jpg',
+    name: 'LOULOU',
+    image: 'images/img31.jpg',
     category: categories[0],
-    location: 'Jinja, Uganda',
-    cost: 'UGX 60-240k',
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 140',
+    available: 2,
+    about:
+        'Black ruffle-detail sequin-embellished mini dress from LOULOU featuring sequin embellishment, ruffled detailing, round neck, concealed rear zip fastening, long sleeves and thigh-length.',
+  ),
+  Event(
+    name: 'Party_Dress',
+    image: 'images/img26.jpg',
+    category: categories[0],
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 70',
+    available: 1,
+    about:
+        'Ball room LBECLEY Little Dress for Women Plus Size',
+  ),
+
+  Event(
+    name: 'Party_Dress',
+    image: 'images/img27.jpg',
+    category: categories[0],
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 50',
+    available: 4,
+    about:
+        'CAICJ98 Semi Formal Dresses For Women. Off Shoulder High Split Evening Gown Long Party Maxi Dress Pink,XL',
+  ),
+  Event(
+    name: 'Party_Dress',
+    image: 'images/img22.jpg',
+    category: categories[0],
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 40',
     available: 3,
     about:
-        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+        'BEST HIGH-LOW FALL WEDDING GUEST DRESS. Jasambac Cocktail Party Dress',
+  ),
+
+  Event(
+    name: 'Semi_formal Dress',
+    image: 'images/img23.jpg',
+    category: categories[0],
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 30',
+    available: 4,
+    about:
+        'Simple and classy semi formal dresses in various designs and colours',
+  ),
+  Event(
+    name: 'Prom_Dress',
+    image: 'images/img28.jpg',
+    category: categories[0],
+    location: 'Loozap_Kla-jinja road',
+    cost: 'USD 65',
+    available: 4,
+    about:
+        'Hi-Low Satin Long Ball Gown Scoop Neck Prom Dress with Pocket Appliques Formal Evening Party Gown. Comes in 12 different colours.',
   ),
 ];
 
