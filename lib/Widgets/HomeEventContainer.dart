@@ -31,7 +31,7 @@ class HomeEventContainer extends StatelessWidget {
                   width: 320,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                       image: AssetImage(event.image),
                     ),
                   ),
