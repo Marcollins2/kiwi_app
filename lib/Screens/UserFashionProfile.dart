@@ -1,27 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:style_palette_app/Screens/HomeScreen.dart';
 
-class FashionProfileScreen extends StatefulWidget {
+class UserFashionProfileScreen extends StatefulWidget {
   @override
-  _FashionProfileScreenState createState() => _FashionProfileScreenState();
+  _UserFashionProfileScreenState createState() =>
+      _UserFashionProfileScreenState();
 }
 
-class _FashionProfileScreenState extends State<FashionProfileScreen> {
-  String _selectedFunction = 'kwanjula'; 
-  String _selectedStyle = 'culture'; 
-  String _selectedSize = 'Medium'; 
-  String _selectedColor = 'Black'; 
+class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
+  String _selectedFunction = 'kwanjula';
+  String _selectedStyle = 'culture';
+  String _selectedSize = 'Medium';
+  String _selectedColor = 'Black';
 
-  
-  List<String> _functionList = ['kwanjula', 'cocktail', 'wedding', 'Prom','Party'];
+  List<String> _functionList = [
+    'kwanjula',
+    'cocktail',
+    'wedding',
+    'Prom',
+    'Party'
+  ];
   List<String> _styleList = ['culture', 'Islam', 'simple', 'Dress'];
   List<String> _sizeList = ['Small', 'Medium', 'Large', 'Extra Large'];
-  List<String> _colorList = ['Black', 'White', 'Blue', 'Red','orange','Yellow', 'maroon'];
+  List<String> _colorList = [
+    'Black',
+    'White',
+    'Blue',
+    'Red',
+    'orange',
+    'Yellow',
+    'maroon'
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fashion Profile'),
+        title: Text('Build Your Fashion Profile'),
+        backgroundColor: Colors.black,
+        elevation: 0,
+        toolbarHeight: 80,
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -91,10 +110,29 @@ class _FashionProfileScreenState extends State<FashionProfileScreen> {
                 );
               }).toList(),
             ),
+            SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
+              child: Material(
+                color: Colors.black,
+                borderRadius: const BorderRadius.all(Radius.circular(30.0)),
+                elevation: 5.0,
+                child: MaterialButton(
+                  onPressed: () {
+                    Get.to(() => HomeScreen());
+                  },
+                  minWidth: MediaQuery.of(context).size.width,
+                  height: 60.0,
+                  child: const Text(
+                    'Show me some clothes 🤩',
+                    style: TextStyle(color: Colors.white, fontSize: 20.0),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-

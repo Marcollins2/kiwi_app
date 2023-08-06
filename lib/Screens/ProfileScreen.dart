@@ -15,14 +15,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+      backgroundColor: Colors.black87,
       body: ListView(
         children: [
           Stack(
             children: [
               Container(
-                height: 150,
+                height: 160,
                 padding: EdgeInsets.all(30),
-                color: Colors.black87,
+                decoration: BoxDecoration(
+                  color: Colors.black87,
+                ),
                 child: Row(
                   children: [
                     CircleAvatar(

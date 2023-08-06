@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "39744453202",
-    "project_id": "kiwi-2e8a3",
-    "storage_bucket": "kiwi-2e8a3.appspot.com"
+    "project_number": "988967495325",
+    "project_id": "kiwi-16045",
+    "storage_bucket": "kiwi-16045.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:39744453202:android:e6bc14480e80f35868fd8b",
+        "mobilesdk_app_id": "1:988967495325:android:9fb670fc60ac1ba5849674",
         "android_client_info": {
           "package_name": "com.eventsapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "39744453202-0km3o5aeie28s49b5gfutdtig98cinlm.apps.googleusercontent.com",
+          "client_id": "988967495325-h0id6c57rjkh0mj6bcoss1v66ffh62nq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAjzy24yv9CqCfrll-t-ZMuRIbrRCrU6oY"
+          "current_key": "AIzaSyBprG-RoqnbeEIh37ltkVWkoUJcenTxUBA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "39744453202-0km3o5aeie28s49b5gfutdtig98cinlm.apps.googleusercontent.com",
+              "client_id": "988967495325-h0id6c57rjkh0mj6bcoss1v66ffh62nq.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,28 +1,35 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:style_palette_app/Screens/HomeScreen.dart';
-import 'package:style_palette_app/Screens/login.dart';
-import 'package:style_palette_app/Screens/signup.dart';
-import 'package:style_palette_app/Screens/welcomescreen.dart';
-import 'package:style_palette_app/Screens/userscreen.dart';
+import 'package:get/get.dart';
+import 'package:style_palette_app/Screens/Login.dart';
+import 'package:style_palette_app/Screens/SignUp.dart';
+import 'package:style_palette_app/Screens/WelcomeScreen.dart';
+
+import 'firebase_options.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(GetMaterialApp(home: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    initFirebase();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Netverbatim'),
-      home: FashionProfileScreen(),
-
-// initialRoute:'HomeScreen',
+      home: LoginScreen(),
       routes: {
         '/Welcomescreen': (context) => WelcomeScreen(),
         '/login': (context) => LoginScreen(),
         '/signup': (context) => RegistrationScreen()
       },
+    );
+  }
+
+  Future<void> initFirebase() async {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
     );
   }
 }

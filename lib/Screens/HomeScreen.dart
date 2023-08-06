@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               height: 200,
               padding: EdgeInsets.all(20),
-              color: Colors.black87,
+              color: Colors.black,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
