@@ -30,7 +30,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey[300],
+                  color: Colors.red[300],
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: IconButton(
@@ -38,7 +38,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   icon: Icon(
                     Icons.camera_alt_outlined,
                     size: 64,
-                    color: Colors.white,
+                    color: Colors.yellow,
                   ),
                 ),
               ),

@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey[300],
+                  color: Colors.red[300],
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: IconButton(
@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   icon: Icon(
                     Icons.camera_alt_outlined,
                     size: 64,
-                    color: Colors.white,
+                    color: Colors.yellow,
                   ),
                 ),
               ),
