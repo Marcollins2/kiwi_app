@@ -8,8 +8,4 @@ class AppWrite {
         .setProject('64d203120401aa014996');
     return client;
   }
-
-  Future<bool> createUser() {
-    return Future.value(true);
-  }
 }

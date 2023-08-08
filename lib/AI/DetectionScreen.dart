@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:tflite/tflite.dart';
 import 'dart:math' as math;
 
@@ -23,9 +24,9 @@ class _DetectionScreenState extends State<DetectionScreen> {
   int _imageWidth = 0;
   String _model = "";
 
-  var bodyHeight = 0;
-  var waistSize = 0;
-  var shoulderSize = 0;
+  var bodyHeight = "0.0";
+  var waistSize = "0.0";
+  var shoulderSize = "0.0";
 
   @override
   void initState() {
@@ -49,11 +50,15 @@ class _DetectionScreenState extends State<DetectionScreen> {
   setRecognitions(recognitions, imageHeight, imageWidth) {
     // Set state is still being called after dispose
     // fix this bug.
-    setState(() {
-      _recognitions = recognitions;
-      _imageHeight = imageHeight;
-      _imageWidth = imageWidth;
-    });
+    try {
+      setState(() {
+        _recognitions = recognitions;
+        _imageHeight = imageHeight;
+        _imageWidth = imageWidth;
+      });
+    } catch (e) {
+      print(e);
+    }
     computeBodySize(_recognitions);
   }
 
@@ -183,31 +188,31 @@ class _DetectionScreenState extends State<DetectionScreen> {
       var leftAnkle = first["keypoints"][15];
       // var rightAnkle = first["keypoints"][16];
 
-      var bodyHeight = computeDistanceBetweenTwoCoordinatesOnA2Dplane(
+      var bodyHeightt = computeDistanceBetweenTwoCoordinatesOnA2Dplane(
         x1: nose['x'],
         x2: leftAnkle['x'],
         y1: nose['y'],
         y2: leftAnkle['y'],
       );
 
-      var waistSize = computeDistanceBetweenTwoCoordinatesOnA2Dplane(
+      var waistSizee = computeDistanceBetweenTwoCoordinatesOnA2Dplane(
         x1: rightHip['x'],
         x2: leftHip['x'],
         y1: rightHip['y'],
         y2: leftHip['y'],
       );
 
-      var shoulderSize = computeDistanceBetweenTwoCoordinatesOnA2Dplane(
+      var shoulderSizee = computeDistanceBetweenTwoCoordinatesOnA2Dplane(
         x1: rightShoulder['x'],
         x2: leftShoulder['x'],
         y1: rightShoulder['y'],
         y2: leftShoulder['y'],
       );
-
+      var f = NumberFormat("###.###", "en_US");
       setState(() {
-        bodyHeight = bodyHeight;
-        waistSize = waistSize;
-        shoulderSize = shoulderSize;
+        bodyHeight = f.format(bodyHeightt);
+        waistSize = f.format(waistSizee);
+        shoulderSize = f.format(shoulderSizee);
       });
 
       print("Body Height: $bodyHeight");
