@@ -1,6 +1,10 @@
+import 'dart:math';
+
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:style_palette_app/Screens/HomeScreen.dart';
+import 'package:kiwi_app/AI/home.dart';
+import 'package:kiwi_app/Screens/HomeScreen.dart';
 
 class UserFashionProfileScreen extends StatefulWidget {
   @override
@@ -9,6 +13,8 @@ class UserFashionProfileScreen extends StatefulWidget {
 }
 
 class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
+  late List<CameraDescription> cameras;
+
   String _selectedFunction = 'kwanjula';
   String _selectedStyle = 'culture';
   String _selectedSize = 'Medium';
@@ -34,6 +40,13 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
   ];
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    initData();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -47,6 +60,38 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text(
+              'Use AI to find your perfect outfit',
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Text('Tap to Open Camera'),
+            SizedBox(
+              height: 8,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: IconButton(
+                onPressed: () => {
+                  openCameraUI(),
+                },
+                icon: Icon(
+                  Icons.camera_alt_outlined,
+                  size: 64,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 60,
+            ),
             Text('Select Function:'),
             DropdownButtonFormField<String>(
               value: _selectedFunction,
@@ -134,5 +179,18 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
         ),
       ),
     );
+  }
+
+  openCameraUI() {
+    Get.to(() => HomePage(cameras));
+    print("Open Camera UI");
+  }
+
+  Future<void> initData() async {
+    try {
+      cameras = await availableCameras();
+    } on CameraException catch (e) {
+      print('Error: $e.code\nError Message: $e.message');
+    }
   }
 }

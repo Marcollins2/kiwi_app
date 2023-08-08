@@ -1,4 +1,4 @@
-import 'package:style_palette_app/Modules/Event.dart';
+import 'package:kiwi_app/Modules/Event.dart';
 import 'package:flutter/material.dart';
 
 const Color KAppColor = Color(0xffde554d);
@@ -155,8 +155,7 @@ List<Event> dinnerTabCentralRegionItems = [
     about:
         'Kateprom Sleeveless Party Homecoming Dress Short Royal Blue Prom Dresses With Zipper',
   ),
-
-   Event(
+  Event(
     name: 'Prom_Dress',
     image: 'images/img16.jpg',
     category: categories[0],
@@ -166,8 +165,7 @@ List<Event> dinnerTabCentralRegionItems = [
     about:
         'Our Dresses are all custom-made, so you order them in any size and color, and you can get your dress within 20-25 days after your payment.You can make the dress in standard size or custom size.',
   ),
-
-   Event(
+  Event(
     name: 'Prom_Dress',
     image: 'images/img19.jpg',
     category: categories[0],
@@ -177,8 +175,7 @@ List<Event> dinnerTabCentralRegionItems = [
     about:
         'Light Blue Prom Dresses Short Tea-Length Lace Applique Corset Back Formal Evening Dress Party Gowns Plus Size Vestido De Fiesta',
   ),
-
-   Event(
+  Event(
     name: 'Prom_Dress',
     image: 'images/img21.jpg',
     category: categories[0],
@@ -188,8 +185,7 @@ List<Event> dinnerTabCentralRegionItems = [
     about:
         'Charming Dark Red Lace Cap Sleeve Prom Party Dresses. Elegant Knee Length. A Line Plus Size Celebrity Dresses Gala',
   ),
-
-Event(
+  Event(
     name: 'Cocktail_Dress',
     image: 'images/img18.jpg',
     category: categories[0],
@@ -199,7 +195,6 @@ Event(
     about:
         'Vintage Elegant Knee Length Cocktail Dress. More size and colour options in stock',
   ),
-
   Event(
     name: 'Party_Dress',
     image: 'images/img17.jpg',
@@ -207,10 +202,8 @@ Event(
     location: 'Loozap_Kla-jinja road',
     cost: 'USD 120',
     available: 4,
-    about:
-        'Short Navy Blue Knee Length Lace Party Dress Evening Dress',
+    about: 'Short Navy Blue Knee Length Lace Party Dress Evening Dress',
   ),
-
   Event(
     name: 'Prom_Dress',
     image: 'images/img20.jpg',
@@ -221,7 +214,6 @@ Event(
     about:
         'Vintage Elegant Knee Length Cocktail Dress. More size and colour options in stock',
   ),
-
 ];
 
 List<Event> dinnerTabWesternRegionItems = [
@@ -242,10 +234,8 @@ List<Event> dinnerTabWesternRegionItems = [
     location: 'Loozap_Kla-jinja road',
     cost: 'USD 70',
     available: 1,
-    about:
-        'Ball room LBECLEY Little Dress for Women Plus Size',
+    about: 'Ball room LBECLEY Little Dress for Women Plus Size',
   ),
-
   Event(
     name: 'Party_Dress',
     image: 'images/img27.jpg',
@@ -266,7 +256,6 @@ List<Event> dinnerTabWesternRegionItems = [
     about:
         'BEST HIGH-LOW FALL WEDDING GUEST DRESS. Jasambac Cocktail Party Dress',
   ),
-
   Event(
     name: 'Semi_formal Dress',
     image: 'images/img23.jpg',
