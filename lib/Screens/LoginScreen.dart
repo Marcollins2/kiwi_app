@@ -13,6 +13,15 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
+  Client client = AppWrite.getClient();
+  late Account account;
+
+  @override
+  void initState() {
+    super.initState();
+    initData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -185,8 +194,6 @@ class _LoginScreenState extends State<LoginScreen> {
       );
     }
     try {
-      Client client = AppWrite.getClient();
-      Account account = Account(client);
       final session = await account.createEmailSession(
         email: emailController.text,
         password: passwordController.text,
@@ -197,11 +204,27 @@ class _LoginScreenState extends State<LoginScreen> {
     } catch (e) {
       Get.snackbar(
         "Error",
-        "Invalid email or password",
+        "Invalid email or password $e",
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.red,
         colorText: Colors.white,
       );
+    }
+  }
+
+  Future<void> initData() async {
+    account = Account(client);
+    setState(() {
+      account = Account(client);
+    });
+    try {
+      final session = await account.get();
+      print("Session");
+      print(session);
+      Get.to(() => UserFashionProfileScreen());
+    } catch (e) {
+      print("No Session");
+      print(e);
     }
   }
 }

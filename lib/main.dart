@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kiwi_app/Screens/LoginScreen.dart';
-import 'package:kiwi_app/Screens/RegistrationScreen.dart';
-import 'package:kiwi_app/Screens/WelcomeScreen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,13 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Netverbatim'),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+      ),
       home: LoginScreen(),
-      routes: {
-        '/Welcomescreen': (context) => WelcomeScreen(),
-        '/login': (context) => LoginScreen(),
-        '/signup': (context) => RegistrationScreen()
-      },
     );
   }
 }

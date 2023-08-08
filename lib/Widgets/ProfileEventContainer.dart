@@ -1,4 +1,3 @@
-import 'package:kiwi_app/Modules/Data.dart';
 import 'package:kiwi_app/Modules/Event.dart';
 import 'package:kiwi_app/Screens/EventScreen.dart';
 import 'package:flutter/material.dart';

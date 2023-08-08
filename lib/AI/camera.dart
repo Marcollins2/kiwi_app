@@ -26,7 +26,7 @@ class _CameraState extends State<Camera> {
   void initState() {
     super.initState();
 
-    if (widget.cameras == null || widget.cameras.length < 1) {
+    if (widget.cameras.length < 1) {
       print('No camera is found');
     } else {
       controller = new CameraController(
@@ -43,7 +43,7 @@ class _CameraState extends State<Camera> {
           if (!isDetecting) {
             isDetecting = true;
 
-            int startTime = new DateTime.now().millisecondsSinceEpoch;
+            // int startTime = new DateTime.now().millisecondsSinceEpoch;
 
             if (widget.model == mobilenet) {
               Tflite.runModelOnFrame(
@@ -54,9 +54,8 @@ class _CameraState extends State<Camera> {
                 imageWidth: img.width,
                 numResults: 2,
               ).then((recognitions) {
-                int endTime = new DateTime.now().millisecondsSinceEpoch;
-                print("Detection took ${endTime - startTime}");
-
+                // int endTime = new DateTime.now().millisecondsSinceEpoch;
+                // print("Detection took ${endTime - startTime}");
                 widget.setRecognitions(recognitions!, img.height, img.width);
 
                 isDetecting = false;
@@ -70,8 +69,8 @@ class _CameraState extends State<Camera> {
                 imageWidth: img.width,
                 numResults: 2,
               ).then((recognitions) {
-                int endTime = new DateTime.now().millisecondsSinceEpoch;
-                print("Detection took ${endTime - startTime}");
+                // int endTime = new DateTime.now().millisecondsSinceEpoch;
+                // print("Detection took ${endTime - startTime}");
 
                 widget.setRecognitions(recognitions!, img.height, img.width);
 
@@ -90,8 +89,8 @@ class _CameraState extends State<Camera> {
                 numResultsPerClass: 1,
                 threshold: widget.model == yolo ? 0.2 : 0.4,
               ).then((recognitions) {
-                int endTime = new DateTime.now().millisecondsSinceEpoch;
-                print("Detection took ${endTime - startTime}");
+                // int endTime = new DateTime.now().millisecondsSinceEpoch;
+                // print("Detection took ${endTime - startTime}");
 
                 widget.setRecognitions(recognitions!, img.height, img.width);
 
@@ -106,13 +105,13 @@ class _CameraState extends State<Camera> {
 
   @override
   void dispose() {
-    controller?.dispose();
+    controller.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    if (controller == null || !controller.value.isInitialized) {
+    if (!controller.value.isInitialized) {
       return Container();
     }
 

@@ -1,9 +1,7 @@
-import 'dart:math';
-
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:kiwi_app/AI/home.dart';
+import 'package:kiwi_app/AI/DetectionScreen.dart';
 import 'package:kiwi_app/Screens/HomeScreen.dart';
 
 class UserFashionProfileScreen extends StatefulWidget {
@@ -41,7 +39,6 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     initData();
   }
@@ -70,7 +67,7 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
             SizedBox(
               height: 8,
             ),
-            Text('Tap to Open Camera'),
+            Text('Tap to Open Camera So We can \nMeasure Your Body'),
             SizedBox(
               height: 8,
             ),
@@ -182,7 +179,7 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
   }
 
   openCameraUI() {
-    Get.to(() => HomePage(cameras));
+    Get.to(() => DetectionScreen(cameras));
     print("Open Camera UI");
   }
 

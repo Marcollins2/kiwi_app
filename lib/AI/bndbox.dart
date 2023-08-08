@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
-import 'models.dart';
+import 'Models.dart';
 
 class BndBox extends StatelessWidget {
   final List<dynamic> results;
