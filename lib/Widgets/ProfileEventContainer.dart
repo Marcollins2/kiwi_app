@@ -25,6 +25,13 @@ class ProfileEventContainer extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.symmetric(horizontal: 25),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(
+                color: Colors.black,
+                width: 1,
+              ),
+            ),
             child: Stack(
               children: [
                 Container(

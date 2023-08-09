@@ -24,39 +24,26 @@ class HomeEventContainer extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.only(right: 15),
-            child: Stack(
-              children: [
-                Container(
-                  height: 210,
-                  width: 320,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.contain,
-                      image: AssetImage(event.image),
-                    ),
-                  ),
-                ),
-                Positioned(
-                    right: 10,
-                    left: 10,
-                    bottom: 10,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          event.cost,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
-                        ),
-                        Icon(
-                          event.category['icon'],
-                          color: Colors.white,
-                        ),
-                      ],
-                    ))
-              ],
+            width: 200,
+            height: 200,
+            padding: EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(
+                color: Colors.black,
+                width: 2,
+              ),
+              image: DecorationImage(
+                fit: BoxFit.fill,
+                image: AssetImage(event.image),
+              ),
+            ),
+            child: Text(
+              event.cost,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+              ),
             ),
           ),
           SizedBox(height: 10),
