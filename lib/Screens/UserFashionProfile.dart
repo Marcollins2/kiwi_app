@@ -25,7 +25,7 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
     'Prom',
     'Party'
   ];
-  List<String> _styleList = ['culture', 'Islam', 'simple', 'Dress'];
+  List<String> _styleList = ['culture', 'Islam', 'Dress'];
   List<String> _sizeList = ['Small', 'Medium', 'Large', 'Extra Large'];
   List<String> _colorList = [
     'Black',
