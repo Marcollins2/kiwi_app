@@ -280,10 +280,40 @@ List<Event> dinnerTabWesternRegionItems = [
 
 List<Event> islamTabCentralRegionItems = [
   Event(
-    name: 'Hijjab',
+    name: 'HIJJAB',
     image: 'images/img2.jpg',
     category: categories[0],
-    location: 'Jinja, Uganda',
+    location: 'HAM TOWERS, Uganda',
+    cost: 'USD 30',
+    available: 10,
+    about:
+        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+  ),
+  Event(
+    name: 'HEAD VEIL',
+    image: 'images/img32.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS, Uganda',
+    cost: 'USD 50',
+    available: 15,
+    about:
+        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+  ),
+  Event(
+    name: 'NIKAB',
+    image: 'images/img34.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS, Uganda',
+    cost: 'UGX 60-240k',
+    available: 3,
+    about:
+        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+  ),
+  Event(
+    name: 'JALBIB',
+    image: 'images/img38.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS, Uganda',
     cost: 'UGX 60-240k',
     available: 3,
     about:
