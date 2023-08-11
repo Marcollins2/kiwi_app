@@ -155,6 +155,11 @@ class _DetectionScreenState extends State<DetectionScreen> {
   }
 
   void confirmBodySize() {
+    // TODO Normalize the body size
+    bodyHeight = (double.parse(bodyHeight) * 100 + 100).toString();
+    waistSize = (double.parse(waistSize) * 100).toString();
+    shoulderSize = (double.parse(shoulderSize) * 100).toString();
+
     print("Confirm Body Size");
     print("Height: $bodyHeight");
     print("Waist: $waistSize");

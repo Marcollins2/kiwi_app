@@ -204,7 +204,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         name: nameController.text,
       );
       print(user);
-      Get.to(() => UserFashionProfileScreen());
+      Get.offAll(() => UserFashionProfileScreen());
     } catch (e) {
       Get.snackbar(
         "Error",

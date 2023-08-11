@@ -1,7 +1,9 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:kiwi_app/AI/DetectionScreen.dart';
+import 'package:kiwi_app/Helpers/Constants.dart';
 import 'package:kiwi_app/Screens/HomeScreen.dart';
 
 
@@ -19,6 +21,12 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
   String _selectedStyle = 'culture';
   String _selectedSize = 'Medium';
   String _selectedColor = 'Black';
+
+  String _userHeightSize = '0.0 cm';
+  String _userWaistSize = '0.0 cm';
+  String _userShoulderSize = '0.0 cm';
+
+  final box = GetStorage();
 
   List<String> _functionList = [
     'kwanjula',
@@ -89,7 +97,27 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
               ),
             ),
             SizedBox(
-              height: 60,
+              height: 40,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Height: $_userHeightSize",
+                  style: TextStyle(fontSize: 24),
+                ),
+                Text(
+                  "Waist: $_userWaistSize",
+                  style: TextStyle(fontSize: 24),
+                ),
+                Text(
+                  "Shoulder: $_userShoulderSize",
+                  style: TextStyle(fontSize: 24),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 40,
             ),
             Text('Select Function:'),
             DropdownButtonFormField<String>(
@@ -123,38 +151,38 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
               }).toList(),
             ),
             SizedBox(height: 16),
-            Text('Select Size:'),
-            DropdownButtonFormField<String>(
-              value: _selectedSize,
-              onChanged: (newValue) {
-                setState(() {
-                  _selectedSize = newValue!;
-                });
-              },
-              items: _sizeList.map((size) {
-                return DropdownMenuItem<String>(
-                  value: size,
-                  child: Text(size),
-                );
-              }).toList(),
-            ),
-            SizedBox(height: 16),
-            Text('Select Color:'),
-            DropdownButtonFormField<String>(
-              value: _selectedColor,
-              onChanged: (newValue) {
-                setState(() {
-                  _selectedColor = newValue!;
-                });
-              },
-              items: _colorList.map((color) {
-                return DropdownMenuItem<String>(
-                  value: color,
-                  child: Text(color),
-                );
-              }).toList(),
-            ),
-            SizedBox(height: 16),
+            // Text('Select Size:'),
+            // DropdownButtonFormField<String>(
+            //   value: _selectedSize,
+            //   onChanged: (newValue) {
+            //     setState(() {
+            //       _selectedSize = newValue!;
+            //     });
+            //   },
+            //   items: _sizeList.map((size) {
+            //     return DropdownMenuItem<String>(
+            //       value: size,
+            //       child: Text(size),
+            //     );
+            //   }).toList(),
+            // ),
+            // SizedBox(height: 16),
+            // Text('Select Color:'),
+            // DropdownButtonFormField<String>(
+            //   value: _selectedColor,
+            //   onChanged: (newValue) {
+            //     setState(() {
+            //       _selectedColor = newValue!;
+            //     });
+            //   },
+            //   items: _colorList.map((color) {
+            //     return DropdownMenuItem<String>(
+            //       value: color,
+            //       child: Text(color),
+            //     );
+            //   }).toList(),
+            // ),
+            // SizedBox(height: 16),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
@@ -164,8 +192,8 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
                 child: MaterialButton(
                   onPressed: () {
                     
-                    Get.to(() => HomeScreen());
 
+                    openHomeScreen();
                   },
                   minWidth: MediaQuery.of(context).size.width,
                   height: 60.0,
@@ -182,9 +210,20 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
     );
   }
 
-  openCameraUI() {
-    Get.to(() => DetectionScreen(cameras));
-    print("Open Camera UI");
+  openCameraUI() async {
+    dynamic data = await Get.to(() => DetectionScreen(cameras));
+    // Save the user measurements to the
+    // local storage using the GetStorage package
+    box.write(Constants.userHeightSize, data['height']);
+    box.write(Constants.userShoulderSize, data['shoulder']);
+    box.write(Constants.userWaistSize, data['waist']);
+    box.write(Constants.userFunctionPref, _selectedFunction);
+    box.write(Constants.userStylePref, _selectedStyle);
+    setState(() {
+      _userHeightSize = "${data['height']} cm";
+      _userShoulderSize = "${data['shoulder']} cm";
+      _userWaistSize = "${data['waist']} cm";
+    });
   }
 
   Future<void> initData() async {
@@ -193,5 +232,21 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
     } on CameraException catch (e) {
       print('Error: $e.code\nError Message: $e.message');
     }
+  }
+
+  void openHomeScreen() {
+    if (_userHeightSize == '0.0 cm' ||
+        _userShoulderSize == '0.0 cm' ||
+        _userWaistSize == '0.0 cm') {
+      Get.snackbar(
+        "Error",
+        "Please scan your body first",
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Colors.red,
+        colorText: Colors.white,
+      );
+      return;
+    }
+    Get.to(() => HomeScreen());
   }
 }

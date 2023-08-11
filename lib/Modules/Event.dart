@@ -1,6 +1,9 @@
 class Event {
   String name;
   String image;
+  double waist;
+  double shoulder;
+  double height;
   Map category;
   String location;
   String cost;
@@ -15,5 +18,8 @@ class Event {
     required this.cost,
     required this.available,
     required this.about,
+    required this.waist,
+    required this.shoulder,
+    required this.height,
   });
 }

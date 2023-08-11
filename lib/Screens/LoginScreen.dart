@@ -192,6 +192,7 @@ class _LoginScreenState extends State<LoginScreen> {
         backgroundColor: Colors.red,
         colorText: Colors.white,
       );
+      return;
     }
     try {
       final session = await account.createEmailSession(
@@ -200,7 +201,7 @@ class _LoginScreenState extends State<LoginScreen> {
       );
 
       print(session);
-      Get.to(() => UserFashionProfileScreen());
+      Get.offAll(() => UserFashionProfileScreen());
     } catch (e) {
       Get.snackbar(
         "Error",

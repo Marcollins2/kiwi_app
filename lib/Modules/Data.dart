@@ -21,6 +21,9 @@ List<Map> categories = [
 List<Event> cultureTabCentralRegionItems = [
   Event(
     name: 'Gomesi_Busuuti',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img2.jpg',
     category: categories[0],
     location: 'Zai_Plaza Kampala',
@@ -31,6 +34,9 @@ List<Event> cultureTabCentralRegionItems = [
   ),
   Event(
       name: 'Bridal_Gomesi',
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
       image: 'images/img12.jpg',
       category: categories[0],
       location: 'Zai_Plaza Kampala',
@@ -39,6 +45,9 @@ List<Event> cultureTabCentralRegionItems = [
       about: 'The perfect attire to brighten up your special day'),
   Event(
       name: 'Executive Gomesi',
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
       image: 'images/img12.jpg',
       category: categories[0],
       location: 'Zai_Plaza Kampala',
@@ -48,6 +57,9 @@ List<Event> cultureTabCentralRegionItems = [
           'The way you dress speaks alot about you. Get this glamourous attire for the utmost respect'),
   Event(
       name: 'Ordinary_Gomesi',
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
       image: 'images/img13.jpg',
       category: categories[0],
       location: 'Zai_Plaza Kampala',
@@ -59,6 +71,9 @@ List<Event> cultureTabCentralRegionItems = [
 List<Event> cultureTabWesternRegionItems = [
   Event(
       name: 'Umushanana',
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
       image: 'images/img8.jpg',
       category: categories[0],
       location: 'Zai_Plaza Kampala',
@@ -67,6 +82,9 @@ List<Event> cultureTabWesternRegionItems = [
       about: 'Bringing out the western culture to light'),
   Event(
       name: 'Umushanana',
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
       image: 'images/img4.jpg',
       category: categories[0],
       location: 'Zai_Plaza Kampala',
@@ -75,6 +93,9 @@ List<Event> cultureTabWesternRegionItems = [
       about: 'Bringing out the western culture to light'),
   Event(
       name: 'Umushanana',
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
       image: 'images/img6.jpg',
       category: categories[0],
       location: 'Zai_Plaza Kampala',
@@ -83,6 +104,9 @@ List<Event> cultureTabWesternRegionItems = [
       about: 'Bringing out the western culture to light'),
   Event(
       name: 'Umushanana',
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
       image: 'images/img10.jpg',
       category: categories[0],
       location: 'Zai_Plaza Kampala',
@@ -94,6 +118,9 @@ List<Event> cultureTabWesternRegionItems = [
 List<Event> profileEvents = [
   Event(
     name: 'Vumbula Festival',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'assets/event2.jpg',
     category: categories[0],
     location: 'Jinja, Uganda',
@@ -104,6 +131,9 @@ List<Event> profileEvents = [
   ),
   Event(
     name: 'Vumbula Festival',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'assets/event2.jpg',
     category: categories[0],
     location: 'Jinja, Uganda',
@@ -114,6 +144,9 @@ List<Event> profileEvents = [
   ),
   Event(
     name: 'Vumbula Festival',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'assets/event2.jpg',
     category: categories[0],
     location: 'Jinja, Uganda',
@@ -124,6 +157,9 @@ List<Event> profileEvents = [
   ),
   Event(
     name: 'Vumbula Festival',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'assets/event2.jpg',
     category: categories[0],
     location: 'Jinja, Uganda',
@@ -134,6 +170,9 @@ List<Event> profileEvents = [
   ),
   Event(
     name: 'Vumbula Festival',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'assets/event2.jpg',
     category: categories[0],
     location: 'Jinja, Uganda',
@@ -147,6 +186,9 @@ List<Event> profileEvents = [
 List<Event> dinnerTabCentralRegionItems = [
   Event(
     name: 'Prom_Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img18.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
@@ -157,16 +199,22 @@ List<Event> dinnerTabCentralRegionItems = [
   ),
   Event(
     name: 'Prom_Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img16.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
     cost: 'USD 120',
     available: 5,
     about:
-        'Our Dresses are all custom-made, so you order them in any size and color, and you can get your dress within 20-25 days after your payment.You can make the dress in standard size or custom size.',
+        'Our Dresses are all custom-made, so you order them in any size and color, and you can get your dress within 20-40 days after your payment.You can make the dress in standard size or custom size.',
   ),
   Event(
     name: 'Prom_Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img19.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
@@ -177,6 +225,9 @@ List<Event> dinnerTabCentralRegionItems = [
   ),
   Event(
     name: 'Prom_Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img21.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
@@ -187,6 +238,9 @@ List<Event> dinnerTabCentralRegionItems = [
   ),
   Event(
     name: 'Cocktail_Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img18.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
@@ -197,6 +251,9 @@ List<Event> dinnerTabCentralRegionItems = [
   ),
   Event(
     name: 'Party_Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img17.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
@@ -206,6 +263,9 @@ List<Event> dinnerTabCentralRegionItems = [
   ),
   Event(
     name: 'Prom_Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img20.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
@@ -219,6 +279,9 @@ List<Event> dinnerTabCentralRegionItems = [
 List<Event> dinnerTabWesternRegionItems = [
   Event(
     name: 'LOULOU',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img31.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
@@ -229,6 +292,9 @@ List<Event> dinnerTabWesternRegionItems = [
   ),
   Event(
     name: 'Party_Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img26.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
@@ -238,6 +304,9 @@ List<Event> dinnerTabWesternRegionItems = [
   ),
   Event(
     name: 'Party_Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img27.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
@@ -248,6 +317,9 @@ List<Event> dinnerTabWesternRegionItems = [
   ),
   Event(
     name: 'Party_Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img22.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
@@ -258,16 +330,22 @@ List<Event> dinnerTabWesternRegionItems = [
   ),
   Event(
     name: 'Semi_formal Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img23.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
-    cost: 'USD 30',
+    cost: 'USD 40',
     available: 4,
     about:
         'Simple and classy semi formal dresses in various designs and colours',
   ),
   Event(
     name: 'Prom_Dress',
+    waist: 30.0,
+    height: 150.0,
+    shoulder: 40.0,
     image: 'images/img28.jpg',
     category: categories[0],
     location: 'Loozap_Kla-jinja road',
@@ -280,161 +358,171 @@ List<Event> dinnerTabWesternRegionItems = [
 
 List<Event> islamTabCentralRegionItems = [
   Event(
-    name: 'PARTY-HIJJAB',
-    image: 'images/img41.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 30',
-    available: 10,
-    about:
-        'Elegance in Modesty: Embrace Islamic Fashion'
-
-  ),
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'PARTY-HIJJAB',
+      image: 'images/img41.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 30',
+      available: 10,
+      about: 'Elegance in Modesty: Embrace Islamic Fashion'),
   Event(
-    name: 'PARTY-HIJJAB',
-    image: 'images/img42.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 30',
-    available: 7,
-    about:
-        'Elegance in Modesty: Embrace Islamic Fashion'
-
-  ),Event(
-    name: 'PARTY-HIJJAB',
-    image: 'images/img43.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 30',
-    available: 5,
-    about:
-        'Elegance in Modesty: Embrace Islamic Fashion'
-
-  ),Event(
-    name: 'PARTY-HIJJAB',
-    image: 'images/img44.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 30',
-    available: 8,
-    about:
-        'Elegance in Modesty: Embrace Islamic Fashion'
-
-  ),Event(
-    name: 'PARTY-HIJJAB',
-    image: 'images/img45.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 30',
-    available: 10,
-    about:
-        'Elegance in Modesty: Embrace Islamic Fashion'
-
-  ),Event(
-    name: 'HIJJAB',
-    image: 'images/img47.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 20',
-    available: 10,
-    about:
-        'Elegance in Modesty: Embrace Islamic Fashion'
-
-  ),
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'PARTY-HIJJAB',
+      image: 'images/img42.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 30',
+      available: 7,
+      about: 'Elegance in Modesty: Embrace Islamic Fashion'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'PARTY-HIJJAB',
+      image: 'images/img43.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 30',
+      available: 5,
+      about: 'Elegance in Modesty: Embrace Islamic Fashion'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'PARTY-HIJJAB',
+      image: 'images/img44.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 30',
+      available: 8,
+      about: 'Elegance in Modesty: Embrace Islamic Fashion'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'PARTY-HIJJAB',
+      image: 'images/img45.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 30',
+      available: 10,
+      about: 'Elegance in Modesty: Embrace Islamic Fashion'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'HIJJAB',
+      image: 'images/img47.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 20',
+      available: 10,
+      about: 'Elegance in Modesty: Embrace Islamic Fashion'),
 ];
 
 List<Event> islamTabWesternRegionItems = [
   Event(
-    name: 'MUSLIM-DRESS',
-    image: 'images/img48.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 25',
-    available: 10,
-    about:
-        'Empowering Your Identity Through Style'
-
-  ),Event(
-    name: 'MUSLIM-DRESS',
-    image: 'images/img49.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 25',
-    available: 6,
-    about:
-        'Empowering Your Identity Through Style'
-
-  ),Event(
-    name: 'MUSLIM-DRESS',
-    image: 'images/img50.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 25',
-    available: 9,
-    about:
-        'Empowering Your Identity Through Style'
-
-  ),Event(
-    name: 'MUSLIM-DRESS',
-    image: 'images/img56.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 25',
-    available: 10,
-    about:
-        'Empowering Your Identity Through Style'
-
-  ),Event(
-    name: 'HIJJAB',
-    image: 'images/img51.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 40',
-    available: 7,
-    about:
-        'Graceful Attire for the Modern Muslimah'
-
-  ),Event(
-    name: 'HIJJAB',
-    image: 'images/img52.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 40',
-    available: 4,
-    about:
-        'Graceful Attire for the Modern Muslimah'
-
-  ),Event(
-    name: 'HIJJAB',
-    image: 'images/img53.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 50',
-    available: 1,
-    about:
-        'Graceful Attire for the Modern Muslimah'
-
-  ),Event(
-    name: 'HIJJAB',
-    image: 'images/img54.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 50',
-    available: 1,
-    about:
-        'Graceful Attire for the Modern Muslimah'
-
-
-  ),Event(
-    name: 'HIJJAB',
-    image: 'images/img55.jpg',
-    category: categories[0],
-    location: 'HAM TOWERS,LEVEL 1',
-    cost: 'USD 50',
-    available: 2,
-    about:
-        'Graceful Attire for the Modern Muslimah'
-        
-
-  ),
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'MUSLIM-DRESS',
+      image: 'images/img48.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 25',
+      available: 10,
+      about: 'Empowering Your Identity Through Style'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'MUSLIM-DRESS',
+      image: 'images/img49.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 25',
+      available: 6,
+      about: 'Empowering Your Identity Through Style'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'MUSLIM-DRESS',
+      image: 'images/img50.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 25',
+      available: 9,
+      about: 'Empowering Your Identity Through Style'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'MUSLIM-DRESS',
+      image: 'images/img56.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 25',
+      available: 10,
+      about: 'Empowering Your Identity Through Style'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'HIJJAB',
+      image: 'images/img51.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 40',
+      available: 7,
+      about: 'Graceful Attire for the Modern Muslimah'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'HIJJAB',
+      image: 'images/img52.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 40',
+      available: 4,
+      about: 'Graceful Attire for the Modern Muslimah'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'HIJJAB',
+      image: 'images/img53.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 50',
+      available: 1,
+      about: 'Graceful Attire for the Modern Muslimah'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'HIJJAB',
+      image: 'images/img54.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 50',
+      available: 1,
+      about: 'Graceful Attire for the Modern Muslimah'),
+  Event(
+      waist: 30.0,
+      height: 150.0,
+      shoulder: 40.0,
+      name: 'HIJJAB',
+      image: 'images/img55.jpg',
+      category: categories[0],
+      location: 'HAM TOWERS,LEVEL 1',
+      cost: 'USD 50',
+      available: 2,
+      about: 'Graceful Attire for the Modern Muslimah'),
 ];
