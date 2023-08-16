@@ -280,56 +280,161 @@ List<Event> dinnerTabWesternRegionItems = [
 
 List<Event> islamTabCentralRegionItems = [
   Event(
-    name: 'HIJJAB',
-    image: 'images/img2.jpg',
+    name: 'PARTY-HIJJAB',
+    image: 'images/img41.jpg',
     category: categories[0],
-    location: 'HAM TOWERS, Uganda',
+    location: 'HAM TOWERS,LEVEL 1',
     cost: 'USD 30',
     available: 10,
     about:
-        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+        'Elegance in Modesty: Embrace Islamic Fashion'
+
   ),
   Event(
-    name: 'HEAD VEIL',
-    image: 'images/img32.jpg',
+    name: 'PARTY-HIJJAB',
+    image: 'images/img42.jpg',
     category: categories[0],
-    location: 'HAM TOWERS, Uganda',
-    cost: 'USD 50',
-    available: 15,
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 30',
+    available: 7,
     about:
-        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
-  ),
-  Event(
-    name: 'NIKAB',
-    image: 'images/img34.jpg',
+        'Elegance in Modesty: Embrace Islamic Fashion'
+
+  ),Event(
+    name: 'PARTY-HIJJAB',
+    image: 'images/img43.jpg',
     category: categories[0],
-    location: 'HAM TOWERS, Uganda',
-    cost: 'UGX 60-240k',
-    available: 3,
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 30',
+    available: 5,
     about:
-        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
-  ),
-  Event(
-    name: 'JALBIB',
-    image: 'images/img38.jpg',
+        'Elegance in Modesty: Embrace Islamic Fashion'
+
+  ),Event(
+    name: 'PARTY-HIJJAB',
+    image: 'images/img44.jpg',
     category: categories[0],
-    location: 'HAM TOWERS, Uganda',
-    cost: 'UGX 60-240k',
-    available: 3,
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 30',
+    available: 8,
     about:
-        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+        'Elegance in Modesty: Embrace Islamic Fashion'
+
+  ),Event(
+    name: 'PARTY-HIJJAB',
+    image: 'images/img45.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 30',
+    available: 10,
+    about:
+        'Elegance in Modesty: Embrace Islamic Fashion'
+
+  ),Event(
+    name: 'HIJJAB',
+    image: 'images/img47.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 20',
+    available: 10,
+    about:
+        'Elegance in Modesty: Embrace Islamic Fashion'
+
   ),
 ];
 
 List<Event> islamTabWesternRegionItems = [
   Event(
-    name: 'Kanzu',
-    image: 'images/img2.jpg',
+    name: 'MUSLIM-DRESS',
+    image: 'images/img48.jpg',
     category: categories[0],
-    location: 'Jinja, Uganda',
-    cost: 'UGX 60-240k',
-    available: 3,
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 25',
+    available: 10,
     about:
-        'Music festivals have come a long way since the psychedelic wig-outs of the \'60s. These days, there\'s a festival for everyone, even if you\'ve shunned most annual mud-fests in the past because you dance to disco and you don\'t like rock. Beyond the traditional London, UK and European festivals, there are fantastic international events from California\'s very Instagram-friendly Coachella to Japan\'s fabulous Fuji Rock, which prides itself on being the \'cleanest festival in the world\'Here are the 50 best music festivals to try before you die.',
+        'Empowering Your Identity Through Style'
+
+  ),Event(
+    name: 'MUSLIM-DRESS',
+    image: 'images/img49.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 25',
+    available: 6,
+    about:
+        'Empowering Your Identity Through Style'
+
+  ),Event(
+    name: 'MUSLIM-DRESS',
+    image: 'images/img50.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 25',
+    available: 9,
+    about:
+        'Empowering Your Identity Through Style'
+
+  ),Event(
+    name: 'MUSLIM-DRESS',
+    image: 'images/img56.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 25',
+    available: 10,
+    about:
+        'Empowering Your Identity Through Style'
+
+  ),Event(
+    name: 'HIJJAB',
+    image: 'images/img51.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 40',
+    available: 7,
+    about:
+        'Graceful Attire for the Modern Muslimah'
+
+  ),Event(
+    name: 'HIJJAB',
+    image: 'images/img52.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 40',
+    available: 4,
+    about:
+        'Graceful Attire for the Modern Muslimah'
+
+  ),Event(
+    name: 'HIJJAB',
+    image: 'images/img53.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 50',
+    available: 1,
+    about:
+        'Graceful Attire for the Modern Muslimah'
+
+  ),Event(
+    name: 'HIJJAB',
+    image: 'images/img54.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 50',
+    available: 1,
+    about:
+        'Graceful Attire for the Modern Muslimah'
+
+
+  ),Event(
+    name: 'HIJJAB',
+    image: 'images/img55.jpg',
+    category: categories[0],
+    location: 'HAM TOWERS,LEVEL 1',
+    cost: 'USD 50',
+    available: 2,
+    about:
+        'Graceful Attire for the Modern Muslimah'
+        
+
   ),
 ];

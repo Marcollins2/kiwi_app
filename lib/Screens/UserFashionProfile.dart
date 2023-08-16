@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:kiwi_app/AI/DetectionScreen.dart';
 import 'package:kiwi_app/Screens/HomeScreen.dart';
 
+
 class UserFashionProfileScreen extends StatefulWidget {
   @override
   _UserFashionProfileScreenState createState() =>
@@ -12,6 +13,7 @@ class UserFashionProfileScreen extends StatefulWidget {
 
 class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
   late List<CameraDescription> cameras;
+
 
   String _selectedFunction = 'kwanjula';
   String _selectedStyle = 'culture';
@@ -161,7 +163,9 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
+                    
                     Get.to(() => HomeScreen());
+
                   },
                   minWidth: MediaQuery.of(context).size.width,
                   height: 60.0,

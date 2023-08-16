@@ -70,7 +70,7 @@ class HomeEventContainer extends StatelessWidget {
               ),
               SizedBox(width: 20),
               Text(
-                '112 available',
+                'Available',
                 style: TextStyle(
                   fontSize: 11,
                   color: Colors.grey,
