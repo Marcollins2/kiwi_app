@@ -161,6 +161,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.only(left: 20),
                   height: MediaQuery.of(context).size.height,
                   child: ListView.builder(
+                    shrinkWrap: true,
                     itemCount: _clothingForDisplay.length,
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) {
@@ -176,6 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.only(left: 20),
                   height: MediaQuery.of(context).size.height,
                   child: ListView.builder(
+                    shrinkWrap: true,
                     itemCount: _clothingForDisplay.length,
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) {
@@ -191,6 +193,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.only(left: 20),
                   height: MediaQuery.of(context).size.height,
                   child: ListView.builder(
+                    shrinkWrap: true,
                     itemCount: _clothingForDisplay.length,
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) {
