@@ -78,61 +78,84 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
             Text(
                 'Tap to Open Camera So We can Measure Your Body and Determine Your Skin tone for a better Fit.'),
             SizedBox(
-              height: 40,
+              height: 20,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Column(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(16),
+                Container(
+                  padding: EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 75,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: IconButton(
+                          onPressed: () => {
+                            openCameraUI(),
+                          },
+                          icon: Icon(
+                            Icons.camera_alt_outlined,
+                            size: 64,
+                          ),
+                        ),
                       ),
-                      child: IconButton(
-                        onPressed: () => {
-                          openCameraUI(),
-                        },
-                        icon: Icon(
-                          Icons.camera_alt_outlined,
-                          size: 64,
-                        ),
+                      SizedBox(
+                        height: 40,
                       ),
-                    ),
-                    SizedBox(
-                      height: 40,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Height: $_userHeightSize",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                        Text(
-                          "Waist: $_userWaistSize",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                        Text(
-                          "Shoulder: $_userShoulderSize",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                      ],
-                    ),
-                  ],
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Height: $_userHeightSize",
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          Text(
+                            "Waist: $_userWaistSize",
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          Text(
+                            "Shoulder: $_userShoulderSize",
+                            style: TextStyle(fontSize: 16),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
                 SizedBox(
                   width: 40,
                 ),
-                Image(
-                  image: AssetImage('assets/images/skin_tone.jpg'),
-                  width: 200,
+                Container(
+                  height: 200,
+                  padding: EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Image(
+                    image: AssetImage('assets/images/skin_tone.jpg'),
+                    width: 125,
+                    height: 125,
+                  ),
                 ),
               ],
             ),
             SizedBox(
-              height: 40,
+              height: 20,
             ),
             Text('Select Function:'),
             DropdownButtonFormField<String>(
