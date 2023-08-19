@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,10 +17,8 @@ class UserFashionProfileScreen extends StatefulWidget {
 class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
   late List<CameraDescription> cameras;
 
-  String _selectedFunction = 'kwanjula';
-  String _selectedStyle = 'culture';
-  String _selectedSize = 'Medium';
-  String _selectedColor = 'Black';
+  String _selectedFunction = 'Kwanjula';
+  String _selectedStyle = 'Culture';
 
   String _userHeightSize = '0.0 cm';
   String _userWaistSize = '0.0 cm';
@@ -27,13 +27,13 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
   final box = GetStorage();
 
   List<String> _functionList = [
-    'kwanjula',
-    'cocktail',
-    'wedding',
+    'Kwanjula',
+    'Cocktail',
+    'Wedding',
     'Prom',
     'Party'
   ];
-  List<String> _styleList = ['culture', 'Islam', 'Dress'];
+  List<String> _styleList = ['Culture', 'Islam', 'Dresses'];
   List<String> _sizeList = ['Small', 'Medium', 'Large', 'Extra Large'];
   List<String> _colorList = [
     'Black',
@@ -141,7 +141,7 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.black,
+                      color: Color.fromARGB(255, 219, 219, 219),
                       width: 2,
                     ),
                     borderRadius: BorderRadius.circular(16),
@@ -189,38 +189,6 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
               }).toList(),
             ),
             SizedBox(height: 16),
-            // Text('Select Size:'),
-            // DropdownButtonFormField<String>(
-            //   value: _selectedSize,
-            //   onChanged: (newValue) {
-            //     setState(() {
-            //       _selectedSize = newValue!;
-            //     });
-            //   },
-            //   items: _sizeList.map((size) {
-            //     return DropdownMenuItem<String>(
-            //       value: size,
-            //       child: Text(size),
-            //     );
-            //   }).toList(),
-            // ),
-            // SizedBox(height: 16),
-            // Text('Select Color:'),
-            // DropdownButtonFormField<String>(
-            //   value: _selectedColor,
-            //   onChanged: (newValue) {
-            //     setState(() {
-            //       _selectedColor = newValue!;
-            //     });
-            //   },
-            //   items: _colorList.map((color) {
-            //     return DropdownMenuItem<String>(
-            //       value: color,
-            //       child: Text(color),
-            //     );
-            //   }).toList(),
-            // ),
-            // SizedBox(height: 16),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
@@ -283,6 +251,11 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
       );
       return;
     }
+    List<String> skinTones = ["cool", "warm", "dark"];
+    String selectedSkinTone = skinTones[Random().nextInt(skinTones.length)];
+    box.write(Constants.userSkinTone, selectedSkinTone);
+    box.write(Constants.selectedStyle, _selectedStyle);
+    box.write(Constants.selectedFunction, _selectedFunction);
     Get.to(() => HomeScreen());
   }
 }

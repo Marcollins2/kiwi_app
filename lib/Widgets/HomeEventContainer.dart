@@ -24,8 +24,8 @@ class HomeEventContainer extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.only(right: 15),
-            width: 200,
-            height: 200,
+            width: MediaQuery.of(context).size.width,
+            height: 380,
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -41,8 +41,9 @@ class HomeEventContainer extends StatelessWidget {
             child: Text(
               event.cost,
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
               ),
             ),
           ),
@@ -77,7 +78,8 @@ class HomeEventContainer extends StatelessWidget {
                 ),
               )
             ],
-          )
+          ),
+          SizedBox(height: 24),
         ],
       ),
     );

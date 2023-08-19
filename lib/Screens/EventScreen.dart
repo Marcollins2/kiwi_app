@@ -58,21 +58,22 @@ class _EventScreenState extends State<EventScreen> {
                       Text(
                         widget.event.name,
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 35,
                         ),
                       ),
                       SizedBox(height: 10),
                       Row(
                         children: [
-                          Icon(
-                            widget.event.category['icon'],
-                            color: Colors.white,
+                          Image(
+                            image: AssetImage(widget.event.category['icon']),
+                            color: Colors.black,
                           ),
                           Text(
                             widget.event.category['name'],
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
+                              fontSize: 24,
                             ),
                           ),
                         ],

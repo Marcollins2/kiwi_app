@@ -5,18 +5,24 @@ const Color KAppColor = Color(0xffde554d);
 
 List<Map> categories = [
   {
-    "name": 'CULTURE',
+    "name": 'Culture',
     'icon': 'assets/icons/culture.png',
   },
   {
-    "name": 'DRESSES',
+    "name": 'Dresses',
     'icon': 'assets/icons/dress.png',
   },
   {
-    "name": 'ISLAM',
+    "name": 'Islam',
     'icon': 'assets/icons/muslim.png',
   },
 ];
+
+List<Event> culturalAll =
+    cultureTabCentralRegionItems + cultureTabWesternRegionItems;
+List<Event> dinnerAll =
+    dinnerTabCentralRegionItems + dinnerTabWesternRegionItems;
+List<Event> islamAll = islamTabCentralRegionItems + islamTabWesternRegionItems;
 
 List<Event> cultureTabCentralRegionItems = [
   Event(

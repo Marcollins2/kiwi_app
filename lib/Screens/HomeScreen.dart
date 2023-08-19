@@ -1,3 +1,5 @@
+import 'package:get_storage/get_storage.dart';
+import 'package:kiwi_app/Helpers/Constants.dart';
 import 'package:kiwi_app/Modules/Data.dart';
 import 'package:kiwi_app/Modules/Event.dart';
 import 'package:kiwi_app/Screens/ProfileScreen.dart';
@@ -11,6 +13,16 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedCategory = 0;
+  List<Event> _clothingForDisplay = [];
+
+  final box = GetStorage();
+
+  late String _userHeightSize;
+  late String _userWaistSize;
+  late String _userShoulderSize;
+  late String _userSkinTone;
+  late String _selectedStyle;
+  late String _selectedFunction;
 
   List<Widget> buildCategoriesWidgets() {
     List<Widget> categoriesWidgets = [];
@@ -47,12 +59,20 @@ class _HomeScreenState extends State<HomeScreen> {
         onTap: () {
           setState(() {
             _selectedCategory = categories.indexOf(category);
+            _selectedStyle = categories[_selectedCategory]['name'];
           });
-          print(_selectedCategory);
+          filterDisplayItems();
+          setState(() {});
         },
       ));
     }
     return categoriesWidgets;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    initData();
   }
 
   @override
@@ -136,71 +156,15 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.only(left: 20),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Central',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: Text(
-                            'All',
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(height: 10),
                     Container(
-                      height: 290,
+                      height: MediaQuery.of(context).size.height,
                       child: ListView.builder(
-                        itemCount: cultureTabCentralRegionItems.length,
-                        scrollDirection: Axis.horizontal,
+                        itemCount: _clothingForDisplay.length,
+                        scrollDirection: Axis.vertical,
                         itemBuilder: (context, index) {
-                          Event event = cultureTabCentralRegionItems[index];
-                          return HomeEventContainer(
-                            event: event,
-                          );
-                        },
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Western',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: Text(
-                            'All',
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(height: 10),
-                    Container(
-                      height: 300,
-                      child: ListView.builder(
-                        itemCount: cultureTabWesternRegionItems.length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          Event event = cultureTabWesternRegionItems[index];
+                          Event event = _clothingForDisplay[index];
                           return HomeEventContainer(
                             event: event,
                           );
@@ -215,70 +179,33 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.only(left: 20),
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Knee_Length',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: Text(
-                            'All',
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(height: 10),
                     Container(
-                      height: 290,
+                      height: MediaQuery.of(context).size.height,
                       child: ListView.builder(
-                        itemCount: dinnerTabCentralRegionItems.length,
-                        scrollDirection: Axis.horizontal,
+                        itemCount: _clothingForDisplay.length,
+                        scrollDirection: Axis.vertical,
                         itemBuilder: (context, index) {
-                          Event event = dinnerTabCentralRegionItems[index];
+                          Event event = _clothingForDisplay[index];
                           return HomeEventContainer(
                             event: event,
                           );
                         },
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Party_Guest Dresses',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: Text(
-                            'All',
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        )
-                      ],
+                    Text(
+                      'Party_Guest Dresses',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
                     ),
-                    SizedBox(height: 10),
                     Container(
-                      height: 300,
+                      height: MediaQuery.of(context).size.height,
                       child: ListView.builder(
-                        itemCount: dinnerTabWesternRegionItems.length,
-                        scrollDirection: Axis.horizontal,
+                        itemCount: _clothingForDisplay.length,
+                        scrollDirection: Axis.vertical,
                         itemBuilder: (context, index) {
-                          Event event = dinnerTabWesternRegionItems[index];
+                          Event event = _clothingForDisplay[index];
                           return HomeEventContainer(
                             event: event,
                           );
@@ -293,70 +220,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.only(left: 20),
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Central',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: Text(
-                            'All',
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(height: 10),
                     Container(
-                      height: 290,
+                      height: MediaQuery.of(context).size.height,
                       child: ListView.builder(
-                        itemCount: islamTabCentralRegionItems.length,
-                        scrollDirection: Axis.horizontal,
+                        itemCount: _clothingForDisplay.length,
+                        scrollDirection: Axis.vertical,
                         itemBuilder: (context, index) {
-                          Event event = islamTabCentralRegionItems[index];
-                          return HomeEventContainer(
-                            event: event,
-                          );
-                        },
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Western',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 15,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: Text(
-                            'All',
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(height: 10),
-                    Container(
-                      height: 300,
-                      child: ListView.builder(
-                        itemCount: islamTabWesternRegionItems.length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          Event event = islamTabWesternRegionItems[index];
+                          Event event = _clothingForDisplay[index];
                           return HomeEventContainer(
                             event: event,
                           );
@@ -371,5 +241,55 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+  }
+
+  void initData() {
+    _userHeightSize = box.read(Constants.userHeightSize);
+    _userWaistSize = box.read(Constants.userWaistSize);
+    _userShoulderSize = box.read(Constants.userShoulderSize);
+    _userSkinTone = box.read(Constants.userSkinTone);
+    _selectedStyle = box.read(Constants.selectedStyle);
+    _selectedFunction = box.read(Constants.selectedFunction);
+    filterDisplayItems();
+  }
+
+  void filterDisplayItems() {
+    // element.height == _userHeightSize &&
+    // element.waist == _userWaistSize &&
+    // element.shoulder == _userShoulderSize &&
+    if (_selectedStyle == "Culture") {
+      setState(() {
+        _selectedCategory = 0;
+        _clothingForDisplay = culturalAll.where((element) {
+          if (element.tone.contains(_userSkinTone)) {
+            return true;
+          } else {
+            return false;
+          }
+        }).toList();
+      });
+    } else if (_selectedStyle == "Dresses") {
+      setState(() {
+        _selectedCategory = 1;
+        _clothingForDisplay = dinnerAll.where((element) {
+          if (element.tone.contains(_userSkinTone)) {
+            return true;
+          } else {
+            return false;
+          }
+        }).toList();
+      });
+    } else if (_selectedStyle == "Islam") {
+      setState(() {
+        _selectedCategory = 2;
+        _clothingForDisplay = islamAll.where((element) {
+          if (element.tone.contains(_userSkinTone)) {
+            return true;
+          } else {
+            return false;
+          }
+        }).toList();
+      });
+    }
   }
 }
