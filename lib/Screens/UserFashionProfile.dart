@@ -6,7 +6,6 @@ import 'package:kiwi_app/AI/DetectionScreen.dart';
 import 'package:kiwi_app/Helpers/Constants.dart';
 import 'package:kiwi_app/Screens/HomeScreen.dart';
 
-
 class UserFashionProfileScreen extends StatefulWidget {
   @override
   _UserFashionProfileScreenState createState() =>
@@ -15,7 +14,6 @@ class UserFashionProfileScreen extends StatefulWidget {
 
 class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
   late List<CameraDescription> cameras;
-
 
   String _selectedFunction = 'kwanjula';
   String _selectedStyle = 'culture';
@@ -77,42 +75,59 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
             SizedBox(
               height: 8,
             ),
-            Text('Tap to Open Camera So We can \nMeasure Your Body'),
-            SizedBox(
-              height: 8,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: IconButton(
-                onPressed: () => {
-                  openCameraUI(),
-                },
-                icon: Icon(
-                  Icons.camera_alt_outlined,
-                  size: 64,
-                ),
-              ),
-            ),
+            Text(
+                'Tap to Open Camera So We can Measure Your Body and Determine Your Skin tone for a better Fit.'),
             SizedBox(
               height: 40,
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text(
-                  "Height: $_userHeightSize",
-                  style: TextStyle(fontSize: 24),
+                Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: IconButton(
+                        onPressed: () => {
+                          openCameraUI(),
+                        },
+                        icon: Icon(
+                          Icons.camera_alt_outlined,
+                          size: 64,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Height: $_userHeightSize",
+                          style: TextStyle(fontSize: 16),
+                        ),
+                        Text(
+                          "Waist: $_userWaistSize",
+                          style: TextStyle(fontSize: 16),
+                        ),
+                        Text(
+                          "Shoulder: $_userShoulderSize",
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                Text(
-                  "Waist: $_userWaistSize",
-                  style: TextStyle(fontSize: 24),
+                SizedBox(
+                  width: 40,
                 ),
-                Text(
-                  "Shoulder: $_userShoulderSize",
-                  style: TextStyle(fontSize: 24),
+                Image(
+                  image: AssetImage('assets/images/skin_tone.jpg'),
+                  width: 200,
                 ),
               ],
             ),
@@ -191,8 +206,6 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
-                    
-
                     openHomeScreen();
                   },
                   minWidth: MediaQuery.of(context).size.width,
