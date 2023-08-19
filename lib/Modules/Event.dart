@@ -9,6 +9,7 @@ class Event {
   String cost;
   int available;
   String about;
+  List<String> tone;
 
   Event({
     required this.name,
@@ -21,5 +22,6 @@ class Event {
     required this.waist,
     required this.shoulder,
     required this.height,
+    required this.tone,
   });
 }
