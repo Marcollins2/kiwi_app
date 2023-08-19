@@ -6,15 +6,15 @@ const Color KAppColor = Color(0xffde554d);
 List<Map> categories = [
   {
     "name": 'CULTURE',
-    'icon': Icons.music_note,
+    'icon': 'assets/icons/culture.png',
   },
   {
     "name": 'DRESSES',
-    'icon': Icons.fastfood,
+    'icon': 'assets/icons/dress.png',
   },
   {
     "name": 'ISLAM',
-    'icon': Icons.self_improvement_sharp,
+    'icon': 'assets/icons/muslim.png',
   },
 ];
 

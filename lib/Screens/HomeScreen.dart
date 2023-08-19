@@ -26,7 +26,12 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           child: Row(
             children: [
-              Icon(category['icon'], color: Colors.white),
+              Image(
+                image: AssetImage(category['icon']),
+                height: 20,
+                width: 20,
+                color: Colors.white,
+              ),
               SizedBox(width: 8),
               Text(
                 category['name'],

@@ -84,7 +84,7 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  padding: EdgeInsets.all(16),
+                  padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.black,
@@ -137,8 +137,8 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
                   width: 40,
                 ),
                 Container(
-                  height: 200,
-                  padding: EdgeInsets.all(16),
+                  height: 195,
+                  padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.black,
@@ -148,8 +148,8 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
                   ),
                   child: Image(
                     image: AssetImage('assets/images/skin_tone.jpg'),
-                    width: 125,
-                    height: 125,
+                    width: 130,
+                    height: 120,
                   ),
                 ),
               ],
@@ -256,9 +256,9 @@ class _UserFashionProfileScreenState extends State<UserFashionProfileScreen> {
     box.write(Constants.userFunctionPref, _selectedFunction);
     box.write(Constants.userStylePref, _selectedStyle);
     setState(() {
-      _userHeightSize = "${data['height']} cm";
-      _userShoulderSize = "${data['shoulder']} cm";
-      _userWaistSize = "${data['waist']} cm";
+      _userHeightSize = "${double.parse(data['height']).round()} cm";
+      _userShoulderSize = "${double.parse(data['shoulder']).round()} cm";
+      _userWaistSize = "${double.parse(data['waist']).round()} cm";
     });
   }
 
