@@ -38,13 +38,40 @@ class HomeEventContainer extends StatelessWidget {
                 image: AssetImage(event.image),
               ),
             ),
-            child: Text(
-              event.cost,
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  event.cost,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                  ),
+                ),
+                event.tone
+                    .map(
+                      (e) => Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 10,
+                          vertical: 5,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Text(
+                          e,
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                    )
+                    .toList()
+                    .first,
+              ],
             ),
           ),
           SizedBox(height: 10),

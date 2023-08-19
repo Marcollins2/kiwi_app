@@ -80,164 +80,130 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        body: ListView(
-          children: [
-            Container(
-              height: 200,
-              padding: EdgeInsets.all(20),
-              color: Colors.black,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.location_on_outlined,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            'Ambrose Mwaka, Kampala',
-                            style: TextStyle(
-                              color: Colors.white,
-                              decoration: TextDecoration.underline,
-                            ),
-                          )
-                        ],
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ProfileScreen(),
-                            ),
-                          );
-                        },
-                        child: CircleAvatar(
-                          radius: 20,
-                          backgroundImage: AssetImage(
-                            'images/img1.jpg',
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  TextField(
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.symmetric(vertical: 15),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white, width: 0.5),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white, width: 0.5),
-                      ),
-                      hintText: "Search",
-                      hintStyle: TextStyle(color: Colors.white),
-                      prefixIcon: Icon(Icons.search, color: Colors.white),
-                      suffixIcon: Icon(Icons.filter_list, color: Colors.white),
-                    ),
-                    onChanged: (val) {},
-                  ),
-                  Container(
-                    height: 50,
-                    child: Row(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: 200,
+                padding: EdgeInsets.all(20),
+                color: Colors.black,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: buildCategoriesWidgets(),
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.location_on_outlined,
+                              color: Colors.white,
+                            ),
+                            Text(
+                              'Ambrose Mwaka, Kampala',
+                              style: TextStyle(
+                                color: Colors.white,
+                                decoration: TextDecoration.underline,
+                              ),
+                            )
+                          ],
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProfileScreen(),
+                              ),
+                            );
+                          },
+                          child: CircleAvatar(
+                            radius: 20,
+                            backgroundImage: AssetImage(
+                              'images/img1.jpg',
+                            ),
+                          ),
+                        )
+                      ],
                     ),
-                  ),
-                ],
+                    TextField(
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.symmetric(vertical: 15),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.white, width: 0.5),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.white, width: 0.5),
+                        ),
+                        hintText: "Search",
+                        hintStyle: TextStyle(color: Colors.white),
+                        prefixIcon: Icon(Icons.search, color: Colors.white),
+                        suffixIcon:
+                            Icon(Icons.filter_list, color: Colors.white),
+                      ),
+                      onChanged: (val) {},
+                    ),
+                    Container(
+                      height: 50,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: buildCategoriesWidgets(),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(height: 15),
-            if (_selectedCategory == 0) ...[
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView.builder(
-                        itemCount: _clothingForDisplay.length,
-                        scrollDirection: Axis.vertical,
-                        itemBuilder: (context, index) {
-                          Event event = _clothingForDisplay[index];
-                          return HomeEventContainer(
-                            event: event,
-                          );
-                        },
-                      ),
-                    ),
-                  ],
+              SizedBox(height: 15),
+              if (_selectedCategory == 0) ...[
+                Container(
+                  padding: EdgeInsets.only(left: 20),
+                  height: MediaQuery.of(context).size.height,
+                  child: ListView.builder(
+                    itemCount: _clothingForDisplay.length,
+                    scrollDirection: Axis.vertical,
+                    itemBuilder: (context, index) {
+                      Event event = _clothingForDisplay[index];
+                      return HomeEventContainer(
+                        event: event,
+                      );
+                    },
+                  ),
+                )
+              ] else if (_selectedCategory == 1) ...[
+                Container(
+                  padding: EdgeInsets.only(left: 20),
+                  height: MediaQuery.of(context).size.height,
+                  child: ListView.builder(
+                    itemCount: _clothingForDisplay.length,
+                    scrollDirection: Axis.vertical,
+                    itemBuilder: (context, index) {
+                      Event event = _clothingForDisplay[index];
+                      return HomeEventContainer(
+                        event: event,
+                      );
+                    },
+                  ),
                 ),
-              )
-            ] else if (_selectedCategory == 1) ...[
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Column(
-                  children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView.builder(
-                        itemCount: _clothingForDisplay.length,
-                        scrollDirection: Axis.vertical,
-                        itemBuilder: (context, index) {
-                          Event event = _clothingForDisplay[index];
-                          return HomeEventContainer(
-                            event: event,
-                          );
-                        },
-                      ),
-                    ),
-                    Text(
-                      'Party_Guest Dresses',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 15,
-                      ),
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView.builder(
-                        itemCount: _clothingForDisplay.length,
-                        scrollDirection: Axis.vertical,
-                        itemBuilder: (context, index) {
-                          Event event = _clothingForDisplay[index];
-                          return HomeEventContainer(
-                            event: event,
-                          );
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            ] else if (_selectedCategory == 2) ...[
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Column(
-                  children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView.builder(
-                        itemCount: _clothingForDisplay.length,
-                        scrollDirection: Axis.vertical,
-                        itemBuilder: (context, index) {
-                          Event event = _clothingForDisplay[index];
-                          return HomeEventContainer(
-                            event: event,
-                          );
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            ]
-          ],
+              ] else if (_selectedCategory == 2) ...[
+                Container(
+                  padding: EdgeInsets.only(left: 20),
+                  height: MediaQuery.of(context).size.height,
+                  child: ListView.builder(
+                    itemCount: _clothingForDisplay.length,
+                    scrollDirection: Axis.vertical,
+                    itemBuilder: (context, index) {
+                      Event event = _clothingForDisplay[index];
+                      return HomeEventContainer(
+                        event: event,
+                      );
+                    },
+                  ),
+                )
+              ],
+            ],
+          ),
         ),
       ),
     );

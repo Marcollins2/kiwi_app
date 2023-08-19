@@ -35,7 +35,7 @@ List<Event> cultureTabCentralRegionItems = [
     location: 'Zai_Plaza Kampala',
     cost: 'USD 90',
     available: 12,
-    tone: ["warm", "cool", "dark"],
+    tone: ["warm"],
     about:
         'Great wear for all kwanjula functions cutting across multiple regions in Uganda',
   ),
@@ -62,7 +62,7 @@ List<Event> cultureTabCentralRegionItems = [
     location: 'Zai_Plaza Kampala',
     cost: 'USD 90',
     available: 23,
-    tone: ["warm", "cool"],
+    tone: ["cool"],
     about:
         'The way you dress speaks alot about you. Get this glamourous attire for the utmost respect',
   ),
@@ -76,7 +76,7 @@ List<Event> cultureTabCentralRegionItems = [
     location: 'Zai_Plaza Kampala',
     cost: 'USD 50',
     available: 3,
-    tone: ["warm", "cool", "dark"],
+    tone: ["dark"],
     about: 'Embrace tradition always',
   ),
 ];
